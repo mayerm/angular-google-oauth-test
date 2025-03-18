@@ -66,7 +66,7 @@ export class GoogleApiService {
   }
 
   getEmailsByAPI(userId : string): Observable<any>{
-    return this.httpClient.get(`${environment.url}/api/gmail/GetMailList/${userId}`, { headers: this.authHeader() })
+    return this.httpClient.get(`${environment.api_url}gmail/GetMailList/${userId}`, { headers: this.authHeader() })
   }
 
   emails(userId: string): Observable<any> {

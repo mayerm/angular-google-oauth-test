@@ -66,10 +66,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          /*"options": {
+          "options": {
             "browserTarget": "angular-google-oauth-test:build",
             "proxyConfig": "src/environments/proxy.config.json"
-          },*/
+          },
           "configurations": {
             "production": {
               "browserTarget": "angular-google-oauth-test:build:production"
