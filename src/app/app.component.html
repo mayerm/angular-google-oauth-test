@@ -1,0 +1,18 @@
+<div *ngIf="isLoggedIn()">
+  <div class="container">Hi and welcome!</div>
+  <div class="container">UserId: {{ userInfo?.info?.sub }}</div>
+  <div class="container"><img src="{{ userInfo?.info?.picture }}" crossorigin="anonymous" alt="userImage"></div>
+  <div class="container">
+    <button (click)="getMailsByAPI()">List Emails by API</button>
+  </div>
+  <div class="container">
+    <button (click)="getEmails()">List Emails</button>
+  </div>
+  <div class="container" *ngFor="let snippet of mailSnippets">
+    {{ snippet }}
+  </div>
+  <div class="container">
+    <button (click)="logout()">Logout from Google</button>
+  </div>
+</div>
+<script src="https://accounts.google.com/gsi/client" async></script>
